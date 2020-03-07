@@ -25,8 +25,8 @@ class HomeController extends Controller
     public function index()
     {
             $posts = \App\Movie::all();
-            // return response()->json(['success' => $posts], $this->successStatus); 
-            return view('dashboard', ['post' => $posts]);
+            return response()->json(['success' => $posts], $this->successStatus); 
+            // return view('dashboard', ['post' => $posts]);
     }
 
 }
