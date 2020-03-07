@@ -19,8 +19,5 @@
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteRule ^ index.php [L]
 
-     "post-install-cmd": [
-     "php artisan clear-compiled",
-     "chmod -R 777 public/"
- ]
+
 </IfModule>
