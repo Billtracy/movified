@@ -8,7 +8,7 @@ class vote extends Model
 {
     
     protected $fillable = [
-        'user_id', 'movie_id', 'user_api_token', 'votes',
+        'user_id', 'movie_id', 'votes',
     ];
 
     public function user()
