@@ -1,0 +1,15 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  color: white;
+  text-align: center;
+  padding-top: 220px;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-image: url("../IMG/mov7.jpg ");
+  background-size: cover;
+  background-repeat: no-repeat;
+}

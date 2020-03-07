@@ -1,0 +1,77 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: Georgia;
+  font-size: 16px;
+}
+#section {
+  width: 80%;
+  /* float: left; */
+  padding: 10px;
+  margin-left: 60px;
+  /* background-color: gray; */
+}
+div.main-container {
+  width: 100%;
+  margin: 4px 10px;
+  padding: 0;
+  display: flex;
+  /* flex-direction: column; */
+}
+div.container1 {
+  width: 90%;
+  margin-top: 32px;
+  margin-bottom: 14px;
+  flex-direction: column;
+  padding: 12px 20px 1px 16px;
+  /* padding-left: 10px; */
+  /* padding-right: 0px; */
+  /* color: white; */
+  /* margin-top: 32px; */
+  /* margin-bottom: 14px; */
+}
+
+div.container1 img {
+  width: 250px;
+  height: 250px;
+  padding: 12px 5px 5px 1px;
+  flex-direction: column;
+  transition: 0.5s;
+
+  /* padding: */
+}
+img:hover {
+  transform: scale(1.2, 1.2);
+}
+text {
+  flex-direction: column;
+  display: flex;
+}
+
+a {
+  text-decoration: none;
+}
+.btn {
+  cursor: pointer;
+  background-color: rgb(37, 37, 179);
+  font-family: "apple-system";
+  font-size: 1em;
+  width: 80px;
+  height: 40px;
+  color: white;
+  border: none;
+  border-radius: 2px;
+  
+  /* margin-left: 6px; */
+  float: right;
+}
+i {
+  padding-left: 4px;
+  
+}
+.btn:hover {
+  content: "Unvote";
+  background-color: rgb(25, 25, 99);
+  color: white;
+}
