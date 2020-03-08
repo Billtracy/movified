@@ -16,7 +16,7 @@
 </tr>
 <tr>
 <td>image</td>
-<td><input type="file" name='image'/></td>
+<td><input type="text" name='image'/></td>
 </tr>
 <tr>
 <td>trailer_url</td>
