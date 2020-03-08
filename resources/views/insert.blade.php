@@ -4,7 +4,7 @@
 <title>temp movie Add</title>
 </head>
 <body>
-<form action = "movified/create" method = "post">
+<form action = "/create" method = "post">
 <input type = "hidden" name = "_token" value = "<?php echo csrf_token(); ?>">
 <table>
 <tr>
