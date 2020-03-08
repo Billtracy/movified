@@ -17,7 +17,7 @@ class CreateMoviesTable extends Migration
             $table->bigIncrements('id');
             $table->string('title');
             $table->string('short_description');
-            $table->image('image');
+            $table->string('image');
             $table->string('trailer_url');
             $table->dateTime('showing_date');
             $table->timestamps();
