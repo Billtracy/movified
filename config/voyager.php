@@ -144,7 +144,6 @@ return [
         ],
 
         'widgets' => [
-            'App\\Widgets\\Movies',
         ],
 
     ],
