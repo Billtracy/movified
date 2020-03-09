@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\vote; 
 use Illuminate\Support\Facades\Auth; 
 use Validator;
+use Response;
 
 
 class HomeController extends Controller
@@ -30,7 +31,8 @@ class HomeController extends Controller
     {
             $posts = \App\Movie::all();
             $date = \App\ShowingDate::all();
-            return response()->json(['success' => $date], $this->successStatus, ['success' => $posts], $this->successStatus);
+            // return response()->json(['success' => $date], $this->successStatus, ['success' => $posts], $this->successStatus);
+            Response::json(array('movies'=>$posts,'date'=>$date));
             // $date = \App\ShowingDate::all();
             // return view('dashboard', ['post' => $posts]);
     }
