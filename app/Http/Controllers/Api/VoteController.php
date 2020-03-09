@@ -1,9 +1,11 @@
 <?php
 
 namespace App\Http\Controllers\Api;
+use Illuminate\Http\Request; 
 use App\Http\Controllers\Controller; 
-use App\vote;
-use Illuminate\Http\Request;
+use App\vote; 
+use Illuminate\Support\Facades\Auth; 
+use Validator;
 
 class VoteController extends Controller
 {
@@ -35,25 +37,32 @@ class VoteController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
-    {
+
         // Validate the request...
+   
+//     public function vote(Request $request){ 
+//         $validator = Validator::make($request->all(), 
+//               [ 
+//               'email' => 'required|between:3,64|email|unique:users',
+//               'tile' => 'required',  
+//              ]);   
+//  if ($validator->fails()) {          
+//        return response()->json(['error'=>$validator->errors()], 401);                        }    
+//  $input = vote::create($request->all());  
+//  if ($input){
+//       // increment the voted field of the movie table
+//     Movie::find($movie_title)->increment('voted');
+//     $success['voted'] =  "you voted successfully";
+//     return response()->json(['success'=>$success], $this->successStatus); 
+//     } else{
+//         return response()->json(['error'=>'vote unsuccessful'], 401);
+//     }
+// }
+    
 
-        $vote = new \App\Vote;
-
-        $vote->user_id = $request->user_id;
-        $vote->movie_id = $request->movie_id;
-        $vote->user_api_token = $request->user_api_token;
-        $vote->votes = $request->votes;
-
-
-        $vote->save();
-
-        return response()->json(['success'=>$vote], $this->successStatus); 
 
         // return redirect('welcome')->with('status', "you successfully voted $request->movie_id;");
         
-    }
 
     /**
      * Display the specified resource.
@@ -61,10 +70,6 @@ class VoteController extends Controller
      * @param  \App\vote  $vote
      * @return \Illuminate\Http\Response
      */
-    public function show(vote $vote)
-    {
-        return view('vote');
-    }
 
     /**
      * Show the form for editing the specified resource.

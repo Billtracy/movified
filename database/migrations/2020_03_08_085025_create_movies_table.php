@@ -20,6 +20,7 @@ class CreateMoviesTable extends Migration
             $table->string('image');
             $table->string('trailer_url');
             $table->dateTime('showing_date');
+            $table->tinyInteger('voted');
             $table->timestamps();
         });
     }

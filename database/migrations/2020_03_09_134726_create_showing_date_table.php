@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateVotesTable extends Migration
+class CreateShowingDateTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,9 @@ class CreateVotesTable extends Migration
      */
     public function up()
     {
-        Schema::create('votes', function (Blueprint $table) {
+        Schema::create('showing_date', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('user_email');
-            $table->string('movie_title');
+            $table->dateTime('next_movie_night');
             $table->timestamps();
         });
     }
@@ -28,6 +27,6 @@ class CreateVotesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('votes');
+        Schema::dropIfExists('showing_date');
     }
 }
