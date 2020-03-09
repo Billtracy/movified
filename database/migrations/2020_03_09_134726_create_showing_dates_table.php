@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateShowingDateTable extends Migration
+class CreateShowingDatesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateShowingDateTable extends Migration
      */
     public function up()
     {
-        Schema::create('showing_date', function (Blueprint $table) {
+        Schema::create('showing_dates', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->dateTime('next_movie_night');
             $table->timestamps();
