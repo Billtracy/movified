@@ -28,7 +28,7 @@ public function insertnext(){
 }
 
 public function next_movie_night(Request $request){
-    $showing = new \App\Showing_date;
+    $showing = new \App\ShowingDate;
     $showing->next_movie_night = $request->next_movie_night;
     $showing->save();
     echo "Record inserted successfully.<br/>";
