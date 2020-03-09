@@ -22,4 +22,17 @@ DB::table('movies')->insert($data);
 echo "Record inserted successfully.<br/>";
 echo '<a href = "/insert">Click Here</a> to go back.';
 }
+
+public function insertnext(){
+    return view('next');
+}
+
+public function next_movie_night(Request $request){
+    $showing = new \App\Showing_date;
+    $showing->next_movie_night = $request->next_movie_night;
+    $showing->save();
+    echo "Record inserted successfully.<br/>";
+    echo '<a href = "/next">Click Here</a> to go back.';
+
+}
 }

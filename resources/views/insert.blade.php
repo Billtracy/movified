@@ -30,7 +30,7 @@
 </tr>
 <tr>
 <td colspan = '2'>
-<input type = 'submit' value = "Add movie"/>
+<input type = 'submit' value = "Add next_movie_night"/>
 </td>
 </tr>
 </table>
