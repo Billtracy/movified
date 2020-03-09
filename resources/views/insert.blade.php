@@ -26,8 +26,7 @@
 <td>showing_date</td>
 <td><input type="text" name='showing_date'/></td>
 </tr>
-<td>voted</td>
-<td><input type="hidden"  value = "Add movie"/></td>
+<td><input type="hidden"  value = 0 name='voted'/></td>
 </tr>
 </tr>
 <tr>
