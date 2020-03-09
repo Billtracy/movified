@@ -26,6 +26,9 @@
 <td>showing_date</td>
 <td><input type="text" name='showing_date'/></td>
 </tr>
+<td>voted</td>
+<td><input type="hidden" name='voted'/></td>
+</tr>
 </tr>
 <tr>
 <td colspan = '2'>
