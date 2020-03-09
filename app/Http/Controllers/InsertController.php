@@ -17,7 +17,7 @@ $image = $request->input('image');
 $trailer_url = $request->input('trailer_url');
 $showing_date = $request->input('showing_date');
 $voted = 0;
-$data=array('title'=>$title,"short_description"=>$short_description,"image"=>$image,"trailer_url"=>$trailer_url, "showing_date"=>$showing_date);
+$data=array('title'=>$title,"short_description"=>$short_description,"image"=>$image,"trailer_url"=>$trailer_url, "showing_date"=>$showing_date, "voted"=>$voted);
 DB::table('movies')->insert($data);
 echo "Record inserted successfully.<br/>";
 echo '<a href = "/insert">Click Here</a> to go back.';
