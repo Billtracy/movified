@@ -30,7 +30,7 @@ class HomeController extends Controller
     {
             $posts = \App\Movie::all();
             $date = \App\ShowingDate::all();
-            return response()->json(['success' => $posts], $this->successStatus, ['success' => $date], $this->successStatus);
+            return response()->json(['success' => $date], $this->successStatus, ['success' => $posts], $this->successStatus);
             // $date = \App\ShowingDate::all();
             // return view('dashboard', ['post' => $posts]);
     }
