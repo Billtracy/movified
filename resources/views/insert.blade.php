@@ -6,6 +6,7 @@
 <body>
 <form action = "/create" method = "post">
 <input type = "hidden" name = "_token" value = "<?php echo csrf_token(); ?>">
+<input type="hidden" name="votes" id="votes" value=0>
 <table>
 <tr>
 <td>title</td>
@@ -25,8 +26,6 @@
 <tr>
 <td>showing_date</td>
 <td><input type="text" name='showing_date'/></td>
-</tr>
-<td><input type="hidden"  value = 0 name='voted'/></td>
 </tr>
 </tr>
 <tr>
