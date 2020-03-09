@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Showing_table;
 use Illuminate\Http\Request;
 
-class ShowingTableController extends Controller
+class ShowingDateController extends Controller
 {
     /**
      * Display a listing of the resource.

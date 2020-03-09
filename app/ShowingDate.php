@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Showing_table extends Model
+class ShowingDate extends Model
 {
     
 protected $fillable = [
