@@ -42,7 +42,7 @@ class MovieType extends GraphQLType
                 'description' => 'The image cover of tne movie',
             ],
             'showing_date' => [
-                'type' => Type::nonNull(Type::dateTime()),
+                'type' => Type::nonNull(Type::date()),
                 'description' => 'The date the movie is showing',
             ]
         ];
