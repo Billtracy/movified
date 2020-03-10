@@ -1,6 +1,6 @@
 <?php
 
-namespace App\GraphQL\Queries;
+namespace App\GraphQL\Query;
 
 use App\Movie;
 use GraphQL\Type\Definition\Type;

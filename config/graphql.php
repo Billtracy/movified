@@ -101,8 +101,8 @@ return [
     'schemas' => [
         'default' => [
             'query' => [
-                'movie' => App\GraphQL\Queries\MovieQuery::class,
-                'movies' => App\GraphQL\Queries\MoviesQuery::class,
+                'movie' => App\GraphQL\Query\MovieQuery::class,
+                'movies' => App\GraphQL\Query\MoviesQuery::class,
                 // 'example_query' => ExampleQuery::class,
             ],
             'mutation' => [
