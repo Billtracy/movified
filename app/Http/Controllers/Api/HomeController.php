@@ -38,24 +38,13 @@ class HomeController extends Controller
     }
 
     public function vote(Request $request){ 
-        $validator = Validator::make($request->all(), 
-              [ 
-              'user_email' => 'required|between:3,64|email|unique:users',
-              'movie_tile' => 'required',  
-             ]);   
- if ($validator->fails()) {          
-       return response()->json(['error'=>$validator->errors()], 401);                        }    
-$vote = new \App\Vote; 
-$vote->user_email = $request->user_email;
-$vote->movie_title = $request->movie_title;
-$input= $vote->save();
-if ($input){
+        vote::create(Request()->validate([
+            'user_email' => 'required|between:3,64|email|unique:users',
+            'movie_tile' => 'required',  
+])); 
       // increment the voted field of the movie table
     Movie::find($movie_title)->increment('voted');
     $success['voted'] =  "you voted successfully";
     return response()->json(['success'=>$success], $this->successStatus); 
-    } else{
-        return response()->json(['error'=>'vote unsuccessful'], 401);
-    }
-}
+    } 
 }
