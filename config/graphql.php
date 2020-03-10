@@ -124,7 +124,7 @@ return [
     //
     'types' => [
         'types' => [
-            'Wine' => App\GraphQL\Types\WineType::class,
+            'Movie' => App\GraphQL\Types\MovieType::class,
         ],
         // 'example'           => ExampleType::class,
         // 'relation_example'  => ExampleRelationType::class,
