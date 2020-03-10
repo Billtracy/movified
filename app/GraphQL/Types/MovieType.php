@@ -29,22 +29,22 @@ class MovieType extends GraphQLType
                 'type' => Type::nonNull(Type::string()),
                 'description' => 'Short description of the movie',
             ],
+            'image' => [
+                'type' => Type::nonNull(Type::string()),
+                'description' => 'The image cover of tne movie',
+            ],
             'trailer_url' => [
                 'type' => Type::nonNull(Type::string()),
                 'description' => 'The trailer_url of the movie',
+            ],
+            'showing_date' => [
+                'type' => Type::nonNull(Type::date()),
+                'description' => 'The date the movie is showing',
             ],
             'voted' => [
                 'type' => Type::nonNull(Type::int()),
                 'description' => 'counts the number of votes for a movie',
             ],
-            'image' => [
-                'type' => Type::nonNull(Type::string()),
-                'description' => 'The image cover of tne movie',
-            ],
-            'showing_date' => [
-                'type' => Type::nonNull(Type::date()),
-                'description' => 'The date the movie is showing',
-            ]
         ];
     }
 }
