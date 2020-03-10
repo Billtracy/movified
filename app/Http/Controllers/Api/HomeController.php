@@ -43,7 +43,7 @@ class HomeController extends Controller
             'movie_tile' => 'required',  
 ])); 
       // increment the voted field of the movie table
-    Movie::find($movie_title)->increment('voted');
+    \App\Movie::find($movie_title)->increment('voted');
     $success['voted'] =  "you voted successfully";
     return response()->json(['success'=>$success], $this->successStatus); 
     } 
