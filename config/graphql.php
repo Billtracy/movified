@@ -101,8 +101,6 @@ return [
     'schemas' => [
         'default' => [
             'query' => [
-                'movie' => App\GraphQL\Queries\MovieQuery::class,
-                'movies' => App\GraphQL\Queries\MoviesQuery::class,
                 // 'example_query' => ExampleQuery::class,
             ],
             'mutation' => [
@@ -124,7 +122,6 @@ return [
     //
     'types' => [
         'types' => [
-            'movie' => App\GraphQL\Types\MovieType::class,
         ],
         // 'example'           => ExampleType::class,
         // 'relation_example'  => ExampleRelationType::class,
