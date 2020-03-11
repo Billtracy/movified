@@ -28,9 +28,10 @@ class HomeController extends Controller
      */
     public function index()
     {
-            $posts = \App\Movie::all();
-            // $date = \App\ShowingDate::find('next_movie_night');
-            return response()->json(['success' => $posts], $this->successStatus);
+            $movies = \App\Movie::all();
+            $date = \App\ShowingDate::find('next_movie_night');
+            $data = ['movies' => $movies];
+            return response()->json(['data' => $data, 'date'=>$date], $this->successStatus);
 
             // $date = \App\ShowingDate::all();
             // return response()->json(['success' => $date], $this->successStatus);
