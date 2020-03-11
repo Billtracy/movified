@@ -1,0 +1,14 @@
+type Movie {
+  id: ID!
+  title: String!
+  short_description: String!
+  image: String!
+  trailer_url: String!
+  showing_date: String!
+  voted: Int
+}
+
+type Query {
+  movie(id: ID! @eq): Movie @find
+  movies: [Movie!]! @all
+}

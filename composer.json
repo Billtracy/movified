@@ -16,6 +16,8 @@
         "laravel/passport": "^8.4",
         "laravel/tinker": "^2.0",
         "laravel/ui": "^1.2",
+        "mll-lab/laravel-graphql-playground": "^2.1",
+        "nuwave/lighthouse": "^4.10",
         "overtrue/laravel-follow": "^1.1",
         "rebing/graphql-laravel": "^4.0",
         "tcg/voyager": "^1.3"
