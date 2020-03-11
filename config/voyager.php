@@ -55,7 +55,7 @@ return [
     */
 
     'storage' => [
-        'disk' => env('FILESYSTEM_DRIVER'),
+        'disk' => env('FILESYSTEM_DRIVER', 'public'),
     ],
 
     /*
