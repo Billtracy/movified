@@ -10,7 +10,7 @@ class MovieType extends GraphQLType
 {
     protected $attributes = [
         'name' => 'Movie',
-        'description' => 'Details about movies',
+        'description' => 'Details about a movie',
         'model' => Movie::class
     ];
 
@@ -31,20 +31,20 @@ class MovieType extends GraphQLType
             ],
             'image' => [
                 'type' => Type::nonNull(Type::string()),
-                'description' => 'The image cover of tne movie',
+                'description' => 'The cover photo of the movie',
             ],
             'trailer_url' => [
                 'type' => Type::nonNull(Type::string()),
-                'description' => 'The trailer_url of the movie',
+                'description' => 'The trailer of the movie',
             ],
             'showing_date' => [
                 'type' => Type::nonNull(Type::date()),
-                'description' => 'The date the movie is showing',
+                'description' => 'The showing date of the movie',
             ],
             'voted' => [
                 'type' => Type::nonNull(Type::int()),
-                'description' => 'counts the number of votes for a movie',
-            ],
+                'description' => 'The vote count of the movie',
+            ]
         ];
     }
 }

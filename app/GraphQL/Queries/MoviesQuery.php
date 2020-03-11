@@ -1,8 +1,8 @@
 <?php
 
-namespace App\GraphQL\Query;
+namespace App\GraphQL\Queries;
 
-use App\Movie;
+use App\Movies;
 use GraphQL\Type\Definition\Type;
 use Rebing\GraphQL\Support\Query;
 

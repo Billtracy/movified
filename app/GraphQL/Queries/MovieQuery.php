@@ -1,6 +1,6 @@
 <?php
 
-namespace App\GraphQL\Query;
+namespace App\GraphQL\Queries;
 
 use App\Movie;
 use GraphQL\Type\Definition\Type;
@@ -12,17 +12,18 @@ class MovieQuery extends Query
         'name' => 'movie',
     ];
 
-    public function type()
+     public function type()
     {
         return GraphQL::type('Movie');
+    //     return Type::listOf(GraphQL::type('movie'));
     }
 
     public function args()
     {
         return [
-            'title' => [
-                'name' => 'title',
-                'type' => Type::string(),
+            'id' => [
+                'name' => 'id',
+                'type' => Type::int(),
                 'rules' => ['required']
             ],
         ];
@@ -30,6 +31,6 @@ class MovieQuery extends Query
 
     public function resolve($root, $args)
     {
-        return Movie::findOrFail($args['title']);
+        return Movie::findOrFail($args['id']);
     }
 }
