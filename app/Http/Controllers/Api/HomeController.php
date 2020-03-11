@@ -31,7 +31,7 @@ class HomeController extends Controller
             $movies = \App\Movie::all();
             $date = \App\ShowingDate::find('next_movie_night');
             $data = ['movies' => $movies];
-            return response()->json(['data' => $data, 'date'=>$date], $this->successStatus);
+            return response()->json(['data' => $data], $this->successStatus);
 
             // $date = \App\ShowingDate::all();
             // return response()->json(['success' => $date], $this->successStatus);
