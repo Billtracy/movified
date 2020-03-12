@@ -122,14 +122,13 @@ return [
     //     'user' => 'App\GraphQL\Type\UserType'
     // ]
     //
-    'types' => [
         'types' => [
             'Movie' => App\GraphQL\Types\MovieType::class,
         ],
         // 'example'           => ExampleType::class,
         // 'relation_example'  => ExampleRelationType::class,
         // \Rebing\GraphQL\Support\UploadType::class,
-    ],
+    
 
     // The types will be loaded on demand. Default is to load all types on each request
     // Can increase performance on schemes with many types
