@@ -19,11 +19,6 @@ Auth::routes();
 
 Route::get('home', 'HomeController@index');
 Route::post('votecontroller', 'VoteController@store');
-Route::get('insert','InsertController@insertform');
-Route::post('create','InsertController@insert');
-Route::get('next','InsertController@insertnext');
-Route::post('night','InsertController@next_movie_night');
-
 // Route::get('/home', 'HomeController@store');
 // Route::post('/home/store', 'HomeController@store');
 
