@@ -60,7 +60,7 @@ public function vote (Request $request) {
     $validator = Validator::make($request->all(), 
                  [ 
                     'email' => 'required|between:3,64|email',
-                    'movie_tile' => 'required',
+                    'movie_title' => 'required',
                 ]);   
     if ($validator->fails()) {          
           return response()->json(['error'=>$validator->errors()], 401);                        }    
