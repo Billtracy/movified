@@ -43,6 +43,10 @@ class MovieType extends GraphQLType
             'voted' => [
                 'type' => Type::nonNull(Type::int()),
                 'description' => 'The vote count',
+            ],
+            'category' => [
+                'type' => Type::getNullableType(Type::string()),
+                'description' => 'The movie category',
             ]
         ];
     }
