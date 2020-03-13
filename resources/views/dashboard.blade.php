@@ -20,7 +20,7 @@
 			<div class="main-container">
 		@foreach($post as $post)
 				<div class="container1">
-          <img src="{{( $post->image) }}"/>
+          <img src="{{ asset(Voyager::image( $post->image )) }}"/>
 
           <h5 class="text">{{ $post->title }}</h5>
           <p class="text">Description:</p>
