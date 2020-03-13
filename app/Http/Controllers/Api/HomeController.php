@@ -43,6 +43,9 @@ class HomeController extends Controller
             'user_email' => 'required|between:3,64|email|unique:users',
             'movie_tile' => 'required',  
 ])); 
+        if ($validator->fails()) {          
+            return response()->json(['error'=>$validator->errors()], 401);      
+        }  
       // increment the voted field of the movie table
     \App\Movie::find($movie_title)->increment('voted');
     $success['voted'] =  "you voted successfully";
