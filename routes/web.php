@@ -15,10 +15,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Auth::routes();
+// Auth::routes();
 
-Route::get('home', 'HomeController@index');
-Route::post('votecontroller', 'VoteController@store');
+// Route::get('home', 'HomeController@index');
+// Route::post('votecontroller', 'VoteController@store');
 // Route::get('/home', 'HomeController@store');
 // Route::post('/home/store', 'HomeController@store');
 
