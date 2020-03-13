@@ -72,8 +72,7 @@ public function vote (Request $request) {
     $vote->save();
     // vote::create($input);
        // increment the voted field of the movie table
-    $movies = \App\Movie::find($vote->movie_title)->increment('voted');
-    $movies->save();
+    \App\Movie::find($vote->movie_title)->increment('voted');
     $success['voted'] =  ('you voted successfully');
     return response()->json(['success'=>$success], $this->successStatus); 
    }
