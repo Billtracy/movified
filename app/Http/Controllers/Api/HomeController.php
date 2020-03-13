@@ -59,7 +59,7 @@ class HomeController extends Controller
 public function vote (Request $request) {    
     $validator = Validator::make($request->all(), 
                  [ 
-                    'user_email' => 'required|between:3,64|email|unique:users',
+                    'email' => 'required|between:3,64|email|unique:users',
                     'movie_tile' => 'required',
                 ]);   
     if ($validator->fails()) {          
