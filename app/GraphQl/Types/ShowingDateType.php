@@ -13,17 +13,8 @@ class ShowingDateType extends GraphQLType
         'model' => ShowingDate::class
     ];
 
-    public function fields(): array
-    {
-        return [
-            'id' => [
-                'type' => Type::nonNull(Type::int()),
-                'description' => 'Id of the date',
-            ],
-            'next_movie_night' => [
-                'type' => Type::nonNull(Type::string()),
-                'description' => 'The next movie night',
-            ]
-            ];
+   public function field(): object
+        {
+            return ['next_movie_night'=>(Type::string)];
+        }
     }
-}
