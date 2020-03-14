@@ -15,7 +15,7 @@ class MovieType extends GraphQLType
 
     public function fields(): array
     {
-        return [
+        return array(
             'id' => [
                 'type' => Type::nonNull(Type::int()),
                 'description' => 'Id of the movie',
@@ -48,6 +48,6 @@ class MovieType extends GraphQLType
                 'type' => Type::getNullableType(Type::string()),
                 'description' => 'The movie category',
             ]
-        ];
+            );
     }
 }
