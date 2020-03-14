@@ -31,6 +31,6 @@ class ShowingDateQuery extends Query
 
     public function resolve($root, $args)
     {
-        return Movie::findOrFail($args['id']);
+        return ShowingDate::findOrFail($args['id']);
     }
 }

@@ -103,7 +103,7 @@ return [
             'query' => [
                 'movie' => App\GraphQL\Queries\MovieQuery::class,
                 'movies' => App\GraphQL\Queries\MoviesQuery::class,
-                'showingdate' => App\GraphQL\Queries\ShoingDateQuery::class,
+                'showingdate' => App\GraphQL\Queries\ShowingDateQuery::class,
                 'showingdates' => App\GraphQL\Queries\ShowingDatesQuery::class,
                 // 'example_query' => ExampleQuery::class,
             ],
