@@ -103,6 +103,8 @@ return [
             'query' => [
                 'movie' => App\GraphQL\Queries\MovieQuery::class,
                 'movies' => App\GraphQL\Queries\MoviesQuery::class,
+                'showingdate' => App\GraphQL\Queries\ShoingDateQuery::class,
+                'showingdates' => App\GraphQL\Queries\ShowingDatesQuery::class,
                 // 'example_query' => ExampleQuery::class,
             ],
             'mutation' => [
@@ -124,6 +126,7 @@ return [
     //
         'types' => [
             'Movie' => App\GraphQL\Types\MovieType::class,
+            'ShowingDate' => App\GraphQL\Types\ShowingDateType::class,
         ],
         // 'example'           => ExampleType::class,
         // 'relation_example'  => ExampleRelationType::class,
