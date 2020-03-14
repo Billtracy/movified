@@ -37,7 +37,7 @@ class MovieType extends GraphQLType
                 'description' => 'The trailer of the movie',
             ],
             'showing_date' => [
-                'type' => Type::nonNull(Type::date_time_set()),
+                'type' => Type::nonNull(Type::string()),
                 'description' => 'The movie showing date',
             ],
             'voted' => [
