@@ -20,9 +20,29 @@ class ShowingDateType extends GraphQLType
                 'type' => Type::nonNull(Type::int()),
                 'description' => 'Id of the date',
             ],
-            'next_movie_night' => [
-                'type' => Type::nonNull(Type::string()),
-                'description' => 'The next movie night',
+            'year' => [
+                'type' => Type::nonNull(Type::int()),
+                'description' => 'The year',
+            ],
+            'month' => [
+                'type' => Type::nonNull(Type::int()),
+                'description' => 'The month',
+            ],
+            'date' => [
+                'type' => Type::nonNull(Type::int()),
+                'description' => 'The date',
+            ],
+            'hour' => [
+                'type' => Type::nonNull(Type::int()),
+                'description' => 'The hour',
+            ],
+            'minutes' => [
+                'type' => Type::nonNull(Type::int()),
+                'description' => 'the minutes',
+            ],
+            'seconds' => [
+                'type' => Type::nonNull(Type::int()),
+                'description' => 'The seconds',
             ]
             ];
     }
