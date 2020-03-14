@@ -83,7 +83,7 @@
                 <div class="title m-b-md">
                     MOVIFIED
                 </div>
-                <img src="{{ (Voyager::image (setting('site.logo'))) }}">
+                <img src="{{ asset(Voyager::image (setting('site.logo'))) }}">
 
                 <!--<div class="links">
                     <a href="https://laravel.com/docs">Docs</a>
