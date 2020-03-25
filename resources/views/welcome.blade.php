@@ -84,6 +84,7 @@
                     MOVIFIED
                 </div>
                 <img src="{{ asset(Voyager::image (setting('site.logo'))) }}">
+                <p>Get The Movified App <a href="https://drive.google.com/open?id=17kQK6h6RbygH5JD9xS2o8ML0-lOnh3-M"> Here</a> </p>
 
                 <!--<div class="links">
                     <a href="https://laravel.com/docs">Docs</a>
