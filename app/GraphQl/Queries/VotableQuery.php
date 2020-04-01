@@ -15,7 +15,7 @@ class VotableQuery extends Query
 
     public function type(): Type
     {
-        return GraphQL::type('Votable');
+        return GraphQL::type('Votables');
     }
 
     public function args():array
