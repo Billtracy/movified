@@ -20,7 +20,7 @@ class VotablesType extends GraphQLType
                 'type' => Type::nonNull(Type::int()),
                 'description' => 'Id',
             ],
-            'check_vote' => [
+            'check_votes' => [
                 'type' => Type::getNullableType(Type::string()),
                 'description' => 'Check votes',
             ],
