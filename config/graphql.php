@@ -105,6 +105,7 @@ return [
                 'movies' => App\GraphQL\Queries\MoviesQuery::class,
                 'showingdate' => App\GraphQL\Queries\ShowingDateQuery::class,
                 'showingdates' => App\GraphQL\Queries\ShowingDatesQuery::class,
+                'votable' => App\GraphQL\Queries\VotableQuery::class,
                 'votables' => App\GraphQL\Queries\VotablesQuery::class,
                 // 'example_query' => ExampleQuery::class,
             ],
