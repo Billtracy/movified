@@ -1,7 +1,7 @@
 <?php
 namespace App\GraphQL\Types;
 
-use App\Votable;
+use App\Votables;
 use GraphQL\Type\Definition\Type;
 use Rebing\GraphQL\Support\Type as GraphQLType;
 
@@ -10,7 +10,7 @@ class VotablesType extends GraphQLType
     protected $attributes = [
         'name' => 'Votable',
         'description' => 'to check voted',
-        'model' => Votable::class
+        'model' => Votables::class
     ];
 
     public function fields(): array
