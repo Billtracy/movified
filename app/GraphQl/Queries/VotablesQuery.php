@@ -1,12 +1,12 @@
 <?php
 namespace App\GraphQL\Queries;
 
-use App\Votab;
+use App\Votable;
 use GraphQL\Type\Definition\Type;
 use Rebing\GraphQL\Support\Facades\GraphQL;
 use Rebing\GraphQL\Support\Query;
 
-class VotabsQuery extends Query
+class VotablesQuery extends Query
 {
     protected $attributes = [
         'name' => 'votable',
@@ -19,6 +19,6 @@ class VotabsQuery extends Query
 
     public function resolve($root, $args)
     {
-        return Votab::all();
+        return Votable::all();
     }
 }
