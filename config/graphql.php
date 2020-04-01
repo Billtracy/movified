@@ -105,7 +105,7 @@ return [
                 'movies' => App\GraphQL\Queries\MoviesQuery::class,
                 'showingdate' => App\GraphQL\Queries\ShowingDateQuery::class,
                 'showingdates' => App\GraphQL\Queries\ShowingDatesQuery::class,
-                'votables' => App\GraphQL\Queries\VotablesQuery::class,
+                'votables' => App\GraphQL\Queries\VotabsQuery::class,
                 // 'example_query' => ExampleQuery::class,
             ],
             'mutation' => [
@@ -128,7 +128,7 @@ return [
         'types' => [
             'Movie' => App\GraphQL\Types\MovieType::class,
             'ShowingDate' => App\GraphQL\Types\ShowingDateType::class,
-            'Votables' => App\GraphQL\Types\VotablesType::class,
+            'Votables' => App\GraphQL\Types\VotabsType::class,
         ],
         // 'example'           => ExampleType::class,
         // 'relation_example'  => ExampleRelationType::class,
