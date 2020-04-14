@@ -29,7 +29,7 @@ return [
     |
     */
 
-    'host' => env('MAIL_HOST', 'smtp.mailgun.org'),
+    'host' => env('MAIL_HOST', 'smtp.sendgrid.net'),
 
     /*
     |--------------------------------------------------------------------------
@@ -56,8 +56,8 @@ return [
     */
 
     'from' => [
-        'address' => env('MAIL_FROM_ADDRESS', 'info@fxnigeria.com'),
-        'name' => env('MAIL_FROM_NAME', 'Fxnigeria'),
+        'address' => env('MAIL_FROM_ADDRESS', 'timgladwell01@gmail.com'),
+        'name' => env('MAIL_FROM_NAME', 'Movified'),
     ],
 
     /*
