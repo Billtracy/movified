@@ -15,6 +15,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('email/verify/{id}', 'Api\VerifyController@verify')->name('verificationapi.verify');
+Route::get('email/resend', 'Api\VerifyController@resend')->name('verificationapi.resend');
+
+
 Auth::routes();
 
 // Route::get('home', 'HomeController@index');

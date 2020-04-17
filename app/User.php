@@ -1,25 +1,26 @@
 <?php
-
+  
 namespace App;
-
+  
 use Laravel\Passport\HasApiTokens;
+use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
-use Illuminate\Notifications\Notifiable;
-
-class User extends \TCG\Voyager\Models\User
+use App\Notifications\VerifyApiEmail;
+  
+class User extends Authenticatable implements MustVerifyEmail
 {
     use HasApiTokens, Notifiable;
-
+  
     /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password', 'api_token',
+        'name', 'email', 'password',
     ];
-
+  
     /**
      * The attributes that should be hidden for arrays.
      *
@@ -38,10 +39,8 @@ class User extends \TCG\Voyager\Models\User
         'email_verified_at' => 'datetime',
     ];
 
-    
-    public function votes()
-    {
-        return $this->hasMany(votes::class);
-    }
-
+    public function sendApiEmailVerificationNotification()
+{
+$this->notify(new VerifyApiEmail); // my notification
+}
 }

@@ -18,7 +18,7 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth');
+        $this->middleware(['auth', 'verified']);
     }
 
     /**
@@ -34,26 +34,6 @@ class HomeController extends Controller
             return response()->json(['response' => 'success', 'data' => $data,], $this->successStatus);
     }
 
-
-            // $date = \App\ShowingDate::all();
-            // return response()->json(['success' => $date], $this->successStatus);
-            // return view('dashboard', ['post' => $posts]);
-    
-
-//     public function vote(Request $request){ 
-//         vote::create(Request()->validate([
-//             'user_email' => 'required|between:3,64|email|unique:users',
-//             'movie_tile' => 'required',  
-// ])); 
-//         if ($validator->fails()) {          
-//             return response()->json(['error'=>$validator->errors()], 401);      
-//         }  
-//       // increment the voted field of the movie table
-//     \App\Movie::find($movie_title)->increment('voted');
-//     $success['voted'] =  "you voted successfully";
-//     return response()->json(['success'=>$success], $this->successStatus); 
-//     } 
-// }
 
 
 public function vote (Request $request) {    
