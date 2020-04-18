@@ -26,6 +26,7 @@ Route::prefix('v1')->group(function(){
     Route::post('getUser', 'Api\AuthController@getUser');
     Route::get('home', 'Api\HomeController@index');
     Route::post('vote', 'Api\HomeController@vote');
+    Route::get('votable', 'Api\HomeController@votable');
 });
 });
    
