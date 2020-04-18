@@ -3,8 +3,7 @@
 namespace App\Http\Controllers\Api;
 use Illuminate\Http\Request; 
 use App\Http\Controllers\Controller; 
-use App\vote; 
-use App\Votable;
+use App\vote;
 use Illuminate\Support\Facades\Auth; 
 use Validator;
 
@@ -60,7 +59,7 @@ public function vote (Request $request) {
 }
 
 public function votable(){
-    $votable = App\Votable::find(1);
+    $votable = \App\Votable::find(1);
     if ($votable->check_votes == 1) {
          return response()->json(['votable'=>'Can Vote']);
     }
