@@ -22,9 +22,10 @@ class AuthController extends Controller
  $input = $request->all();  
  $input['password'] = bcrypt($input['password']);
  $user = User::create($input);
- $user->sendApiEmailVerificationNotification();
+//  $user->sendApiEmailVerificationNotification();
 
- $success['message'] = 'Please confirm yourself by clicking on verify button sent to you on your email';
+//  $success['message'] = 'Please confirm yourself by clicking on verify button sent to you on your email';
+ $success['token'] =  $user->createToken('AppName')-> accessToken;
  return response()->json(['success'=>$success], $this-> successStatus);
 }
   
