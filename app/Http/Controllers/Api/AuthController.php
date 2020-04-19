@@ -51,4 +51,4 @@ public function getUser() {
  $user = Auth::user();
  return response()->json(['success' => $user], $this->successStatus); 
  }
-}
+} 
