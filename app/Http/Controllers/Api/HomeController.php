@@ -46,16 +46,18 @@ public function vote (Request $request) {
           return response()->json(['error'=>$validator->errors()], 401);
 } else{
     $vote = new vote();
-    // $email = $request->all();
     $vote->email = $request->input('email');
     $vote->movie_title = $request->input('movie_title');
+    if (vote::where('email', '=', $vote->email)->exists()) {
+        return response()->json(['error'=> 'you already voted'], 401);
+     }else{
     $vote->save();
-    // vote::create($input);
        // increment the voted field of the movie table
     \App\Movie::find($vote->movie_title)->increment('voted');
     $success['voted'] =  ('you voted successfully');
     return response()->json(['success'=>$success], $this->successStatus); 
    }
+}
 }
 
 public function votable(){
