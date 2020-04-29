@@ -30,7 +30,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-            $movies = App\Movie::all();
+            $movies = \App\Movie::all();
             $data = ['movies' => $movies];
             return response()->json(['data' => $data,], $this->successStatus);
     }
@@ -48,7 +48,7 @@ public function vote (Request $request) {
           return response()->json(['error'=>$validator->errors()], 401);
 } else{
     // check if people can vote
-    $votable = App\Votable::find(1);
+    $votable = \App\Votable::find(1);
     if ($votable->check_votes == 0){
         return response()->json(['error'=> "you can't vote now"], 401);
     }else{
@@ -61,7 +61,7 @@ public function vote (Request $request) {
      }else{
     $vote->save();
        // increment the voted field of the movie table
-    App\Movie::find($vote->movie_title)->increment('voted');
+    \App\Movie::find($vote->movie_title)->increment('voted');
     $success['voted'] =  ('you voted successfully');
     return response()->json(['success'=>$success], $this->successStatus); 
    }
