@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateShowingDatesTable extends Migration
+class CreateShowingDateTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateShowingDatesTable extends Migration
      */
     public function up()
     {
-        Schema::create('showing_dates', function (Blueprint $table) {
+        Schema::create('showing_date', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->tinyInteger('year');
             $table->tinyInteger('month');
@@ -32,6 +32,6 @@ class CreateShowingDatesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('showing_dates');
+        Schema::dropIfExists('showing_date');
     }
 }
