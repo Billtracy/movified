@@ -40,8 +40,7 @@ class HomeController extends Controller
 public function vote (Request $request) {  
     // validate the inputs  
     $validator = Validator::make($request->all(), 
-                 [ 
-                    'email' => 'required|between:3,64|email',
+                 [
                     'movie_title' => 'required',
                 ]);   
     if ($validator->fails()) {          
@@ -53,7 +52,7 @@ public function vote (Request $request) {
         return response()->json(['error'=> "you can't vote now"], 401);
     }else{
     $vote = new vote();
-    $vote->email = $request->input('email');
+    $vote->email = Auth::user()->email;
     $vote->movie_title = $request->input('movie_title');
     // check if the person has voted before
     if (vote::where('email', '=', $vote->email)->exists()) {
