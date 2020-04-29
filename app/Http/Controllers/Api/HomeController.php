@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers\Api;
 use Illuminate\Http\Request; 
-use App\Http\Controllers\Controller; 
+use App\Http\Controllers\Controller;
+use App\Movie;
 use App\vote;
 use App\Votable;
-use App\Movie;
 use Illuminate\Support\Facades\Auth; 
 use Validator;
 
@@ -31,7 +31,6 @@ class HomeController extends Controller
     public function index()
     {
             $movies = App\Movie::all();
-            // $date = \App\ShowingDate::where('next_movie_night', 1)->firstOrFail();
             $data = ['movies' => $movies];
             return response()->json(['data' => $data,], $this->successStatus);
     }
