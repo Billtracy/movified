@@ -8,7 +8,7 @@ class ShowingDate extends Model
 {
     
 protected $fillable = [
-    'next_movie_night',
+    'year','month', 'date', 'hour', 'minutes', 'seconds',
     ];
 
 }
