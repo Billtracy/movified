@@ -66,9 +66,11 @@ class HomeController extends Controller
                 if (vote::where('email', '=', $vote->email)->exists()){
                     return "you have already voted";
                 }
-                $vote->save();
-                $movie->increment('voted');
-                return "you voted successfully";
+                else{
+                    $vote->save();
+                    $movie->increment('voted');
+                    return "you voted successfully";
+                }
             }
         }
     }
