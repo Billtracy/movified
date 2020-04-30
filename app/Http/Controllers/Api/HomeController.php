@@ -51,10 +51,10 @@ public function vote (Request $request) {
     if ($votable->check_votes == 0){
         return response()->json(['error'=> "you can't vote now"], 401);
     }else{
-    // $movie_id=  Movie::where ('id', '=', $request->input('movie_title'))->exists();
     $vote = new vote();
     $vote->email = Auth::user()->email;
     $vote->movie_title = $request->input('movie_title');
+    // check if movie exists
     if (Movie::where ('id', '=', $vote->movie_title)->exists()){
     // check if the person has voted before
     if (vote::where('email', '=', $vote->email)->exists()) {
