@@ -55,11 +55,10 @@ class HomeController extends Controller
             else{
                 //find movie
                 $movie = Movie::find($request->input('movie_id'));
-
-                return $movie;
-                // if(empty($movie)){
-                //     return "movie does not exist";
-                // }
+                
+                if(empty($movie)){
+                    return "movie does not exist";
+                }
 
             }
         }
