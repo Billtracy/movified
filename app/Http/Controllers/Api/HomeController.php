@@ -59,13 +59,25 @@ class HomeController extends Controller
                 if(empty($movie)){
                     return "movie does not exist";
                 }
-
+                $vote = new vote;
+                $vote->email = Auth::user()->email;
+                $vote->movie_id = $request->input('movie_id');
+                $vote->movie_title = $movie->title;
+                if (vote::where('email', '=', $vote->email)->exists()){
+                    return "you have already voted";
+                }
+                $vote->save;
+                $movie->increment('voted');
+                return "you voted successfully";
             }
         }
     }
 }
-
-            //if movie exists
+                
+                
+                
+                
+                //if movie exists
                 //save voting
 
             //else
