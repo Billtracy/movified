@@ -60,6 +60,9 @@ class HomeController extends Controller
                 }
 
             }
+        }
+    }
+}
 
             //if movie exists
                 //save voting
@@ -67,36 +70,35 @@ class HomeController extends Controller
             //else
                 // return movie does not exist
 
-        }
-    } 
+    
 
 
 
 
 
 
-$votable = Votable::find(1);  
-if ($votable->check_votes == 0){
-    return response()->json(['error'=> "you can't vote now"], 401);
-}
-else{
-$movie = Movie::find($request->input('movie_id'));
-$vote = new vote();
-$vote->email = Auth::user()->email;
-$vote->movie_id = $request->input('movie_id');
-$vote->movie_title = $movie->title ?? null;
-if (Movie::where ('id', '=', $vote->movie_id)->exists()){
-if (vote::where('email', '=', $vote->email)->exists()) {
-    return response()->json(['error'=> 'you already voted'], 401);
- }else{
-$vote->save();
-Movie::find($vote->movie_id)->increment('voted');
-$success['voted'] =  'you voted successfully';
-return response()->json(['success'=>$success], $this->successStatus); 
-}
-}else{
-return response()->json(['error'=> 'movie does not exist']);
-}
-}
-}
-}
+// $votable = Votable::find(1);  
+// if ($votable->check_votes == 0){
+//     return response()->json(['error'=> "you can't vote now"], 401);
+// }
+// else{
+// $movie = Movie::find($request->input('movie_id'));
+// $vote = new vote();
+// $vote->email = Auth::user()->email;
+// $vote->movie_id = $request->input('movie_id');
+// $vote->movie_title = $movie->title ?? null;
+// if (Movie::where ('id', '=', $vote->movie_id)->exists()){
+// if (vote::where('email', '=', $vote->email)->exists()) {
+//     return response()->json(['error'=> 'you already voted'], 401);
+//  }else{
+// $vote->save();
+// Movie::find($vote->movie_id)->increment('voted');
+// $success['voted'] =  'you voted successfully';
+// return response()->json(['success'=>$success], $this->successStatus); 
+// }
+// }else{
+// return response()->json(['error'=> 'movie does not exist']);
+// }
+// }
+// }
+// }
