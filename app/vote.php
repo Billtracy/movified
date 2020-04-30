@@ -8,7 +8,7 @@ class vote extends Model
 {
     
     protected $fillable = [
-        'user_email', 'movie_title',
+        'user_email', 'movie_id', 'movie_title'
     ];
 
     public function user()
