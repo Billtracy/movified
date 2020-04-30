@@ -51,7 +51,7 @@ public function vote (Request $request) {
     if ($votable->check_votes == 0){
         return response()->json(['error'=> "you can't vote now"], 401);
     }else{
-    $movie_id= Movie::where ('movie_title', '=', $request->input('movie_title'))->exists();
+    $movie_id= vote::where ('movie_title', '=', $request->input('movie_title'))->exists();
     $vote = new vote();
     $vote->email = Auth::user()->email;
     $vote->movie_title = $movie_id;
