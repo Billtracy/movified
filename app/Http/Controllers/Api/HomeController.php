@@ -59,7 +59,7 @@ class HomeController extends Controller
                 if(empty($movie)){
                     return "movie does not exist";
                 }
-                $vote = new vote;
+                $vote = new vote();
                 $vote->email = Auth::user()->email;
                 $vote->movie_id = $request->input('movie_id');
                 $vote->movie_title = $movie->title;
