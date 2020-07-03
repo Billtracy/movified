@@ -40,7 +40,7 @@ class User extends \TCG\Voyager\Models\User implements MustVerifyEmail
 
     public function sendApiEmailVerificationNotification()
     {
-        $this->notify(new Notifications/VerifyApiEmail); // my notification
+        $this->notify(new Notifications\VerifyApiEmail); // my notification
     }
     
     public function votes()
