@@ -18,8 +18,8 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::prefix('v1')->group(function(){
-    // Route::get('email/verify/{id}', 'Api\VerifyController@verify')->name('verificationapi.verify');
-    // Route::get('email/resend', 'Api\VerifyController@resend')->name('verificationapi.resend');
+    Route::get('email/verify/{id}', 'Api\VerifyController@verify')->name('verificationapi.verify');
+    Route::get('email/resend', 'Api\VerifyController@resend')->name('verificationapi.resend');
     Route::post('login', 'Api\AuthController@login');
     Route::post('register', 'Api\AuthController@register');
     Route::group(['middleware' => 'auth:api'], function(){

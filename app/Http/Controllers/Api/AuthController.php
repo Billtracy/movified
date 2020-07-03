@@ -33,14 +33,14 @@ class AuthController extends Controller
 public function login(){ 
 if(Auth::attempt(['id' => request('id'), 'password' => request('password')])){ 
    $user = Auth::user();
-//    if($user->email_verified_at !== NULL){
+    if($user->email_verified_at !== NULL){
    $success['token'] =  $user->createToken('AppName')-> accessToken; 
     return response()->json(['success' => $success], $this-> successStatus);
    }
-//    else{
-//         return response()->json(['error'=>'Please Verify Email'], 401);
-//         }
-//         }
+    else{
+         return response()->json(['error'=>'Please Verify Email'], 401);
+         }
+      }
  else{ 
    return response()->json(['error'=>'Unauthorised'], 401); 
    } 
