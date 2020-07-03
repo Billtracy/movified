@@ -15,11 +15,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('email/verify/{id}', 'Api\VerifyController@verify')->name('verificationapi.verify');
-Route::get('email/resend', 'Api\VerifyController@resend')->name('verificationapi.resend');
+// Route::get('email/verify/{id}', 'Api\VerifyController@verify')->name('verificationapi.verify');
+// Route::get('email/resend', 'Api\VerifyController@resend')->name('verificationapi.resend');
 
 
-Auth::routes();
+Auth::routes()->except('login', 'register');
 
 // Route::get('home', 'HomeController@index');
 // Route::post('votecontroller', 'VoteController@store');
