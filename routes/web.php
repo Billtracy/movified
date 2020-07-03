@@ -19,7 +19,7 @@ Route::get('/', function () {
 // Route::get('email/resend', 'Api\VerifyController@resend')->name('verificationapi.resend');
 
 
-Auth::routes()->except('login', 'register');
+Auth::routes();
 
 // Route::get('home', 'HomeController@index');
 // Route::post('votecontroller', 'VoteController@store');
