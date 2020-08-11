@@ -640,6 +640,7 @@ class ComposerStaticInitf5de17e12e96edd50c1d167ac5a43ec6
 
     public static $classMap = array (
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
+        'App\\Crons' => __DIR__ . '/../..' . '/app/Crons.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
         'App\\GraphQL\\Queries\\MovieQuery' => __DIR__ . '/../..' . '/app/GraphQl/Queries/MovieQuery.php',
         'App\\GraphQL\\Queries\\MoviesQuery' => __DIR__ . '/../..' . '/app/GraphQl/Queries/MoviesQuery.php',
@@ -653,7 +654,6 @@ class ComposerStaticInitf5de17e12e96edd50c1d167ac5a43ec6
         'App\\Http\\Controllers\\Api\\AuthController' => __DIR__ . '/../..' . '/app/Http/Controllers/Api/AuthController.php',
         'App\\Http\\Controllers\\Api\\HomeController' => __DIR__ . '/../..' . '/app/Http/Controllers/Api/HomeController.php',
         'App\\Http\\Controllers\\Api\\VerifyController' => __DIR__ . '/../..' . '/app/Http/Controllers/Api/VerifyController.php',
-        'App\\Http\\Controllers\\Api\\VoteController' => __DIR__ . '/../..' . '/app/Http/Controllers/Api/VoteController.php',
         'App\\Http\\Controllers\\Auth\\ConfirmPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ConfirmPasswordController.php',
         'App\\Http\\Controllers\\Auth\\ForgotPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ForgotPasswordController.php',
         'App\\Http\\Controllers\\Auth\\LoginController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/LoginController.php',

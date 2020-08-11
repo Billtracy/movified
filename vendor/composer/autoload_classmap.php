@@ -7,6 +7,7 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'App\\Console\\Kernel' => $baseDir . '/app/Console/Kernel.php',
+    'App\\Crons' => $baseDir . '/app/Crons.php',
     'App\\Exceptions\\Handler' => $baseDir . '/app/Exceptions/Handler.php',
     'App\\GraphQL\\Queries\\MovieQuery' => $baseDir . '/app/GraphQl/Queries/MovieQuery.php',
     'App\\GraphQL\\Queries\\MoviesQuery' => $baseDir . '/app/GraphQl/Queries/MoviesQuery.php',
@@ -20,7 +21,6 @@ return array(
     'App\\Http\\Controllers\\Api\\AuthController' => $baseDir . '/app/Http/Controllers/Api/AuthController.php',
     'App\\Http\\Controllers\\Api\\HomeController' => $baseDir . '/app/Http/Controllers/Api/HomeController.php',
     'App\\Http\\Controllers\\Api\\VerifyController' => $baseDir . '/app/Http/Controllers/Api/VerifyController.php',
-    'App\\Http\\Controllers\\Api\\VoteController' => $baseDir . '/app/Http/Controllers/Api/VoteController.php',
     'App\\Http\\Controllers\\Auth\\ConfirmPasswordController' => $baseDir . '/app/Http/Controllers/Auth/ConfirmPasswordController.php',
     'App\\Http\\Controllers\\Auth\\ForgotPasswordController' => $baseDir . '/app/Http/Controllers/Auth/ForgotPasswordController.php',
     'App\\Http\\Controllers\\Auth\\LoginController' => $baseDir . '/app/Http/Controllers/Auth/LoginController.php',

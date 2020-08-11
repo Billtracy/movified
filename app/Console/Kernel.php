@@ -4,6 +4,7 @@ namespace App\Console;
 
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
+use App\Cron;
 
 class Kernel extends ConsoleKernel
 {
@@ -26,6 +27,14 @@ class Kernel extends ConsoleKernel
     {
         // $schedule->command('inspire')
         //          ->hourly();
+
+        // $schedule->command('db:wipe --force')->everyFiveMinutes();
+        // $schedule->command('command:test')->everyMinute();
+        $schedule->command('command:test')
+                        ->everyMinute()
+                        ->when(function(){
+                            return Cron::shouldIRun('command:test', 60);;
+                });
     }
 
     /**
@@ -38,5 +47,6 @@ class Kernel extends ConsoleKernel
         $this->load(__DIR__.'/Commands');
 
         require base_path('routes/console.php');
+
     }
 }
