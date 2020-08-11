@@ -28,12 +28,15 @@ class Kernel extends ConsoleKernel
         // $schedule->command('inspire')
         //          ->hourly();
 
-        // $schedule->command('db:wipe --force')->everyFiveMinutes();
+        // $schedule->command('db:wipe --force')->everyFiveMinutes()
+        // ->when(function(){
+        //                  return Cron::shouldIRun('db:wipe --force', 2);;
+        //          });
         // $schedule->command('command:test')->everyMinute();
-        $schedule->command('command:test')
+        $schedule->command('down')
                         ->everyMinute()
                         ->when(function(){
-                            return Cron::shouldIRun('command:test', 2);;
+                            return Cron::shouldIRun('down', 2);;
                 });
     }
 
