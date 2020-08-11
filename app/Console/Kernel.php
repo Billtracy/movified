@@ -25,19 +25,19 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
-        // $schedule->command('inspire')
-        //          ->hourly();
+        $schedule->command('down')
+                 ->everyMinute();
 
         // $schedule->command('db:wipe --force')->everyFiveMinutes()
         // ->when(function(){
         //                  return Cron::shouldIRun('db:wipe --force', 2);;
         //          });
         // $schedule->command('command:test')->everyMinute();
-        $schedule->command('down')
-                        ->everyMinute()
-                        ->when(function(){
-                            return Cron::shouldIRun('down', 2);;
-                });
+    //     $schedule->command('down')
+    //                     ->everyMinute()
+    //                     ->when(function(){
+    //                         return Cron::shouldIRun('down', 2);;
+    //             });
     }
 
     /**
