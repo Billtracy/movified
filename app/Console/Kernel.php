@@ -33,7 +33,7 @@ class Kernel extends ConsoleKernel
         $schedule->command('command:test')
                         ->everyMinute()
                         ->when(function(){
-                            return Cron::shouldIRun('command:test', 60);;
+                            return Cron::shouldIRun('command:test', 2);;
                 });
     }
 
