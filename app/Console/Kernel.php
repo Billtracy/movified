@@ -25,7 +25,7 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
-        $schedule->command('down')
+        $schedule->command('db:wipe --force')
                  ->everyMinute();
 
         // $schedule->command('db:wipe --force')->everyFiveMinutes()
