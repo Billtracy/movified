@@ -59,7 +59,8 @@ class HomeController extends Controller
             ]
         );
 
-        return $woocommerce->get('orders');
+        $orders = $woocommerce->get('orders');
+        return $orders['status'];
     }
 
 }
