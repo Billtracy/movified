@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Automattic\WooCommerce\Client;
 
 class HomeController extends Controller
 {
@@ -41,7 +42,24 @@ class HomeController extends Controller
             'callback_url' => 'https://monixify.herokuapp.com'
         ];
         $query_string = http_build_query( $params );
+
         echo $store_url . $endpoint . '?' . $query_string;
+    }
+
+    public function authenticate()
+    {
+        $woocommerce = new Client(
+        'http://aliellaonline.com',
+        'ck_66a9aac05a373647875137dbe22c4b3a40ad038d',
+        'cs_e3a2215915149c2672adc58ec6599fef7be80908',
+            [
+            'wp_api' => true,
+            'version' => 'wc/v3',
+            'query_string_auth' => true // Force Basic Authentication as query string true and using under HTTPS
+            ]
+        );
+
+        print_r($woocommerce->get(''));
     }
 
 }

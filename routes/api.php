@@ -25,7 +25,7 @@ Route::prefix('v1')->group(function(){
     Route::group(['middleware' => 'auth:api'], function(){
     Route::post('getUser', 'Api\AuthController@getUser');
     Route::get('home', 'Api\HomeController@index');
-    Route::get('getkeys', 'HomeController@getApiKeys');
+    Route::get('authenticate', 'HomeController@authenticate');
     Route::post('vote', 'Api\HomeController@vote');
 });
 });
