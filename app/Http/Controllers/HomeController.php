@@ -64,7 +64,7 @@ class HomeController extends Controller
         // foreach ($orders as $order){
         //     return response()->json($order);
         // }
-        return response()->json($result->billing);
+        return response()->json($result);
     }
 
 }
