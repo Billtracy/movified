@@ -60,8 +60,8 @@ class HomeController extends Controller
         );
 
         $orders = $woocommerce->get('orders');
-        $result = array($orders);
-        foreach ($result as $order) {
+        // $result = array($orders);
+        foreach ($orders as $order) {
             return $order->status;
         }
 
