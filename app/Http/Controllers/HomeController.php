@@ -59,7 +59,7 @@ class HomeController extends Controller
             ]
         );
 
-        print_r($woocommerce->get(''));
+        print_r($woocommerce->get('orders'));
     }
 
 }
