@@ -60,10 +60,12 @@ class HomeController extends Controller
         );
 
         $orders = $woocommerce->get('orders');
+        $result = (object) $orders;
+        return $result->total;
         // $result = array($orders);
-        foreach ($orders as $order) {
-            return $order->total;
-        }
+        // foreach ($orders as $order) {
+        //     return $order->total;
+        // }
 
     }
 
