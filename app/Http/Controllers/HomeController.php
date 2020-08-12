@@ -62,7 +62,7 @@ class HomeController extends Controller
         $orders = $woocommerce->get('orders');
         $result = array($orders);
         foreach ($result as $order) {
-            return $order['status'];
+            return $order;
         }
 
     }
