@@ -22,10 +22,11 @@ Route::prefix('v1')->group(function(){
     Route::get('email/resend', 'Api\VerifyController@resend')->name('verificationapi.resend');
     Route::post('login', 'Api\AuthController@login');
     Route::post('register', 'Api\AuthController@register');
+    Route::get('authenticate', 'HomeController@authenticate');
     Route::group(['middleware' => 'auth:api'], function(){
     Route::post('getUser', 'Api\AuthController@getUser');
     Route::get('home', 'Api\HomeController@index');
-    Route::get('authenticate', 'HomeController@authenticate');
+
     Route::post('vote', 'Api\HomeController@vote');
 });
 });
