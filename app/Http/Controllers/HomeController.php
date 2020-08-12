@@ -63,7 +63,7 @@ class HomeController extends Controller
         // $result = array($orders);
         foreach ($orders as $order) {
             if($order->status == "processing"){
-                return $order;
+                var_dump($order);
             }
             // return $order->status;
         }
