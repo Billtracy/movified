@@ -62,7 +62,10 @@ class HomeController extends Controller
         $orders = $woocommerce->get('orders');
         // $result = array($orders);
         foreach ($orders as $order) {
-            return $order->status;
+            if($order->status == "processing"){
+                return $order;
+            }
+            // return $order->status;
         }
 
     }
