@@ -60,10 +60,11 @@ class HomeController extends Controller
         );
 
         $orders = $woocommerce->get('orders');
+        $result = (object) $orders;
         // foreach ($orders as $order){
         //     return response()->json($order);
         // }
-        return response()->json($orders->billing);
+        return response()->json($result->billing);
     }
 
 }
