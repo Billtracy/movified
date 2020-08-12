@@ -60,7 +60,7 @@ class HomeController extends Controller
         );
 
         $orders = $woocommerce->get('orders');
-        return $orders;
+        return $orders['billing'];
     }
 
 }
