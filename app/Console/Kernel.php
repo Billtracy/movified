@@ -26,18 +26,18 @@ class Kernel extends ConsoleKernel
     protected function schedule(Schedule $schedule)
     {
         $schedule->command('inspire')
-                 ->everyMinute();
+            ->everyMinute();
 
         // $schedule->command('db:wipe --force')->everyFiveMinutes()
         // ->when(function(){
         //                  return Cron::shouldIRun('db:wipe --force', 2);;
         //          });
         // $schedule->command('command:test')->everyMinute();
-    //     $schedule->command('down')
-    //                     ->everyMinute()
-    //                     ->when(function(){
-    //                         return Cron::shouldIRun('down', 2);;
-    //             });
+        //     $schedule->command('down')
+        //                     ->everyMinute()
+        //                     ->when(function(){
+        //                         return Cron::shouldIRun('down', 2);;
+        //             });
     }
 
     /**
@@ -47,9 +47,8 @@ class Kernel extends ConsoleKernel
      */
     protected function commands()
     {
-        $this->load(__DIR__.'/Commands');
+        $this->load(__DIR__ . '/Commands');
 
         require base_path('routes/console.php');
-
     }
 }
