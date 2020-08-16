@@ -55,7 +55,7 @@ class HomeController extends Controller
             [
             'wp_api' => true,
             'version' => 'wc/v3',
-            'query_string_auth' => true // Force Basic Authentication as query string true and using under HTTPS
+            'query_string_auth' => true // Force Basic Authentication as query string true an
             ]
         );
 
