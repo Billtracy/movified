@@ -8,11 +8,7 @@ use Automattic\WooCommerce\Client;
 class HomeController extends Controller
 {
     public $successStatus = 200;
-    /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
+    
     // public function __construct()
     // {
     //     $this->middleware('auth');
