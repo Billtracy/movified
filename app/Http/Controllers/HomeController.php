@@ -18,11 +18,6 @@ class HomeController extends Controller
     //     $this->middleware('auth');
     // }
 
-    /**
-     * Show the application dashboard.
-     *
-     * @return \Illuminate\Contracts\Support\Renderable
-     */
     public function index()
     {
             $posts = \App\Movie::all();
@@ -60,10 +55,6 @@ class HomeController extends Controller
         );
 
         $orders = $woocommerce->get('orders');
-        // $result = (object) $orders;
-        // foreach ($orders as $order){
-        //     return response()->json($order);
-        // }
         return response()->json($orders);
     }
 
