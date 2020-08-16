@@ -33,8 +33,6 @@ class VoteController extends Controller
 
         $vote->save();
 
-        // return response()->json(['success'=>$vote], $this->successStatus);
-
         return redirect('/')->with('status', "you successfully voted $request->movie_id;");
 
     }
